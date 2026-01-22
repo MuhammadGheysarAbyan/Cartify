@@ -192,11 +192,6 @@ header {
     object-fit: contain;
 }
 
-/* Logo hover effect */
-.logo:hover img {
-    transform: scale(1.05);
-}
-
 .nav-menu ul {
     display: flex;
     align-items: center;
