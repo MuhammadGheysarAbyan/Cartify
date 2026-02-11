@@ -174,9 +174,14 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 0;
+    gap: 20px;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo-img {
@@ -190,6 +195,11 @@ header {
     width: auto;
     max-width: 180px;
     object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    margin-left: auto;
 }
 
 .nav-menu ul {
@@ -267,6 +277,8 @@ header {
     cursor: pointer;
     z-index: 1001;
     transition: var(--transition);
+    position: absolute;
+    right: 20px;
 }
 
 .mobile-menu-btn:hover {
@@ -1095,19 +1107,21 @@ footer {
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 280px;
         height: 100vh;
         background-color: var(--navbar-bg);
         padding: 100px 30px 30px;
         transition: var(--transition);
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        border-left: 1px solid var(--navbar-border);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid var(--navbar-border);
+        flex-direction: column;
+        display: flex;
     }
     
     .nav-menu.active {
-        right: 0;
+        left: 0;
     }
     
     .nav-menu ul {
